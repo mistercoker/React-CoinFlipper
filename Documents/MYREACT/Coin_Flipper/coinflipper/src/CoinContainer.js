@@ -20,7 +20,15 @@ export default class CoinContainer extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     flipCoin() {
-
+        const newCoin = choice(this.props.coins);
+        this.setState(st => {
+            return {
+                curCoin: newCoin,
+                nFlips: st.nFlips + 1,
+                nHeads: st.nHeads + (newCoin.side === 'heads' ? 1 :0),
+                nTails: st.nTails + (newCoin.side === 'tailss' ? 1 :0)
+            }
+        });
     }
     handleClick(e) {
         this.flipCoin();
