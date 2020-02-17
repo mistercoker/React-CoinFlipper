@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { choice } from './helpers';
+
 
 export default class CoinContainer extends Component {
     static defaultProps = {
