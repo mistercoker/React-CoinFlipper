@@ -26,8 +26,8 @@ export default class CoinContainer extends Component {
             return {
                 curCoin: newCoin,
                 nFlips: st.nFlips + 1,
-                nHeads: st.nHeads + (newCoin.side === 'heads' ? 1 :0),
-                nTails: st.nTails + (newCoin.side === 'tailss' ? 1 :0)
+                nHeads: st.nHeads + (newCoin.side === 'heads' ? 1 : 0),
+                nTails: st.nTails + (newCoin.side === 'tails' ? 1 : 0)
             }
         });
     }
@@ -38,8 +38,8 @@ export default class CoinContainer extends Component {
         return (
             <div>
                 <h2>Let's Flip A Coin</h2>
-                <button onClick={this.handleClick}>Flip A Coin</button>
                 {this.state.curCoin && <Coin info={this.state.curCoin} />}
+                <button onClick={this.handleClick}>Flip A Coin</button>
                 <p>Out of {this.state.nFlips} flips, there has been {this.state.nHeads} heads and {this.state.nTails} tails</p>
             </div>
         )
