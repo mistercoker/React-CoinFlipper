@@ -11,3 +11,9 @@ https://react-coinflipper.netlify.com/
 ### Design
 
 ### Tech Stack
+- CSS3
+- JavaScript
+- ReactJS
+- NPM
+- Netlify
+- Git
